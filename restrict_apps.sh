@@ -1,6 +1,10 @@
 #!/bin/bash
 
 user=$1
+if [[ $# -ne 1 ]]               
+  then echo "Username not provided"
+  exit
+fi
 if id $user > /dev/null 2>&1
   then 
   sudo chmod 000 "/Applications/System Preferences.app/Contents/MacOS/System Preferences"
